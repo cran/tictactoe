@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![Build Status](https://travis-ci.org/kota7/tictactoe.svg?branch=master)](https://travis-ci.org/kota7/tictactoe)
+[![Build Status](https://travis-ci.org/kota7/tictactoe.svg?branch=master)](https://travis-ci.org/kota7/tictactoe) [![CRAN Status](https://www.r-pkg.org/badges/version/tictactoe)](https://www.r-pkg.org/badges/version/tictactoe) [![](http://cranlogs.r-pkg.org/badges/tictactoe)](https://cran.r-project.org/package=tictactoe)
 
 tictactoe
 =========
@@ -10,7 +10,13 @@ Play and learn Tic-Tac-Toe Game on R
 installation and import
 -----------------------
 
-To install,
+Install from CRAN
+
+``` r
+install.packages("tictactoe")
+```
+
+Or you may install the recent development version from github
 
 ``` r
 devtools::install_github("kota7/tictactoe")
@@ -31,7 +37,7 @@ You can play tic-tac-toe on R console.
 ttt(ttt_human(), ttt_ai())
 ```
 
-This would give you a prompt like:
+This would give you a prompt as below.
 
         A B C
        ------
@@ -42,15 +48,13 @@ This would give you a prompt like:
      Player 1 (no name) to play
     choose move (e.g. A1) > 
 
-Type the move, then the oppoenet will respond. To finish the game in the middle, type "exit".
+Type a move, then the oppoenet will respond. To finish the game in the middle, type "exit".
 
-The default AI player is very week (in fact, he plays randomly). To play against a more sophisticated player, set the `level` argument.
+The default AI player is very week (in fact, he plays randomly). To play against a more sophisticated player, set the `level` argument (from 0 (weekest) to 5 (strongest)).
 
 ``` r
 ttt(ttt_human(), ttt_ai(level = 4))
 ```
-
-`level` is from 0 (weekest) to 5 (strongest).
 
 You may play as the second mover by `ttt(ttt_ai(), ttt_human())`. You may watch games between AI players by `ttt(ttt_ai(), ttt_ai())`.
 
